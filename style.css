@@ -7,8 +7,8 @@ body {
 
 #back3 {
     position: absolute;
-    width: 98.5%;
-    height: 100%;
+    width: 98%;
+    height: 99%;
 }
 
 #back2 {
@@ -23,67 +23,64 @@ body {
     position: relative;
     z-index: 0;
     top: 3vh;
-    right: 1.5vw;
     background-color: rgb(235, 229, 229);
+    max-width: 47%;
     height: 93vh;
 }   
 
 /*central part + buttons*/
 
 .over {
-    top: 20vh;
-    left: 44.5vw;
+    top: 10%;
+    left: 46%;
     font-size: 2rem;
     position: fixed;
     z-index: 1;
-    
 }
 
 #buttonNewGame {
-    width: 2vw;
-    height: auto;
+    width: 5%;
 }
 
-#buttonNewGame:hover {
-    width: 3vw;
+.buttonNewGame {
+    display: inline;
 }
 
 #dice {
-    width: 8vw;
-    height: auto;
+    width: 15%;
     margin-top: 18vh;
 }
 
 #buttonRollDice {
-    width: 2vw;
-    height: auto;
+    width: 5%;
 }
 
-
-#buttonRollDice:hover {
-    width: 3vw;
-}
-
-@media screen and (max-width: 800px) {
-    #buttonRollDice {
-        display: block;
-    }
-    .over {
-        font-size: 1.2rem;
-    }
+.buttonRollDice {
+    display: inline;
 }
 
 #buttonHold {
-    width: 2vw;
-    height: auto;
+    width: 5%;
+}
+
+#buttonNewGame:hover {
+    width: 7%;
+}
+
+#buttonRollDice:hover {
+    width: 7%;
 }
 
 #buttonHold:hover {
-    width: 3vw;
+    width: 7%;
+}
+
+.buttonHold {
+    display: inline;
 }
 
 .margin1 {
-    margin-top: 15vh;
+    margin-top: 20%;
 }
 
 .margin2 {
@@ -96,24 +93,21 @@ body {
     text-align: center;
     color: red;
     font-size: 4rem;
+    margin-bottom: 30vh;
 }
 
 .roundSquare {
-    text-align: center;
-    padding-top: 0.7rem;
+    margin-inline: auto;
+    padding-top: 3%;
     width: 20vh;
     height: 15vh;
     background-color: rgb(219, 49, 49);
     font-size: 2rem;
-}
-
-.roundSquare{
-   margin-inline: auto;
-   margin-top: 30vh;
+    text-align: center;
 }
 
 .roundScore {
-    padding-top: 2vh;
+    padding-top: 1vh;
     text-align: center;
     font-size: 2rem;
     color: white;
@@ -126,7 +120,66 @@ body {
 #player1, 
 #player2 {
     margin-left: 1vw;
-    margin-top: 1.5vh;
+    margin-top: 1vh;
     color: red;
     font-size: 7vw;
+}
+
+/* responsive */
+
+
+@media screen and (max-width: 900px) {
+    .over {
+        top: 25%;
+        left: 42%;
+    }
+    #dice {
+        margin-top: 5vh;
+        width: 28%;
+    }
+    .totalScore {
+        margin-bottom: 50vh;
+    }
+    .players {
+        font-size: 3rem;
+        margin-top: 5vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .buttonNewGame,
+    .buttonRollDice,
+    .buttonHold {
+        font-size: 1.5rem;
+    }
+    #buttonNewGame,
+    #buttonRollDice,
+    #buttonHold {
+        width: 1.5rem;
+    }
+    #buttonNewGame:hover,
+    #buttonRollDice:hover,
+    #buttonHold:hover {
+        width: 10%;
+    }
+    .players {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .roundSquare {
+        font-size: 1rem;
+        width: 25vw;
+        height: 10vh;
+    }
+    .roundScore {
+        font-size: 1rem;
+    }
+    .totalScore {
+        font-size: 2rem;
+    }
+    .margin2 {
+        margin-top: 1vh;
+    }
 }
