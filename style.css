@@ -31,12 +31,12 @@ body {
 /*central part + buttons*/
 
 .over {
-    top: 6vh;
+    top: 20vh;
     left: 44.5vw;
-    font-size: 2vw;
+    font-size: 2rem;
     position: fixed;
     z-index: 1;
-    margin-top: 6vh;
+    
 }
 
 #buttonNewGame {
@@ -59,8 +59,18 @@ body {
     height: auto;
 }
 
+
 #buttonRollDice:hover {
     width: 3vw;
+}
+
+@media screen and (max-width: 800px) {
+    #buttonRollDice {
+        display: block;
+    }
+    .over {
+        font-size: 1.2rem;
+    }
 }
 
 #buttonHold {
@@ -85,6 +95,7 @@ body {
 .totalScore {
     text-align: center;
     color: red;
+    font-size: 4rem;
 }
 
 .roundSquare {
@@ -93,7 +104,7 @@ body {
     width: 20vh;
     height: 15vh;
     background-color: rgb(219, 49, 49);
-    font-size: 1.5vw;
+    font-size: 2rem;
 }
 
 .roundSquare{
@@ -104,7 +115,7 @@ body {
 .roundScore {
     padding-top: 2vh;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 2rem;
     color: white;
 }
 
