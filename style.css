@@ -8,7 +8,7 @@ body {
 #back3 {
     position: absolute;
     width: 98%;
-    height: 99%;
+    height: 98%;
 }
 
 #back2 {
@@ -31,7 +31,7 @@ body {
 /*central part + buttons*/
 
 .over {
-    top: 10%;
+    top: 15%;
     left: 46%;
     font-size: 2rem;
     position: fixed;
@@ -39,7 +39,7 @@ body {
 }
 
 #buttonNewGame {
-    width: 5%;
+    width: 7%;
 }
 
 .buttonNewGame {
@@ -47,12 +47,12 @@ body {
 }
 
 #dice {
-    width: 15%;
+    width: 30%;
     margin-top: 18vh;
 }
 
 #buttonRollDice {
-    width: 5%;
+    width: 7%;
 }
 
 .buttonRollDice {
@@ -60,19 +60,19 @@ body {
 }
 
 #buttonHold {
-    width: 5%;
+    width: 7%;
 }
 
 #buttonNewGame:hover {
-    width: 7%;
+    width: 8%;
 }
 
 #buttonRollDice:hover {
-    width: 7%;
+    width: 8%;
 }
 
 #buttonHold:hover {
-    width: 7%;
+    width: 8%;
 }
 
 .buttonHold {
@@ -80,7 +80,7 @@ body {
 }
 
 .margin1 {
-    margin-top: 20%;
+    margin-top: 30%;
 }
 
 .margin2 {
@@ -181,5 +181,8 @@ body {
     }
     .margin2 {
         margin-top: 1vh;
+    }
+    .over {
+        top: 20%;
     }
 }
