@@ -11,10 +11,8 @@ class Player {
 //Initialization//
 
 $('document').ready(function() {
-    $('p.roundScore').html('<p>0</p>')
-    $('p.totalScore').html('<p>0</p>')
     $('#player1').css('color', 'red')
-    $('#player2').css('color', 'rgb(235, 229, 229)')   
+    $('#player2').css('color', 'rgb(231, 226, 226)')   
 })
 
 var player1 = new Player(1)
@@ -23,15 +21,17 @@ var joueur = 1
 
 //Start new game//
 
-$('#buttonNewGame').click(function() {
-    $('#p1').html('<div>PLAYER 1</div>')
-    $('#p2').html('<div>PLAYER 2</div>')
-    $('p.roundScore').html('<p>0</p>')
-    $('p.totalScore').html('<p>0</p>')
+$('#buttonNewGame, .buttonNewGame').click(function() {
+    $('#p1').html('PLAYER 1')
+    $('#p2').html('PLAYER 2')
+    $('roundScore').html('0')
+    $('div.totalScore').html('0')
     $('#player1').css('color', 'red')
-    $('#player2').css('color', 'rgb(235, 229, 229)') 
+    $('#player2').css('color', 'rgb(231, 226, 226)') 
     $('#buttonRollDice').css('display', 'inline-block')
     $('#buttonHold').css('display', 'inline-block')
+    $('p.buttonRollDice').css('display', 'inline-block')
+    $('p.buttonHold').css('display', 'inline-block')
     player1 = new Player(1)
     player2 = new Player(2)
     joueur = 1
@@ -43,7 +43,7 @@ player2 = new Player(2)
 
 //to roll the dice and score//
 
-$('#buttonRollDice').click(function() {
+$('#buttonRollDice, .buttonRollDice').click(function() {
     let result =  Math.floor(Math.random()*6)+1
     switch (result) {
         case 1:
@@ -61,7 +61,7 @@ $('#buttonRollDice').click(function() {
                     result = 0
                     $('p.roundScore').html('<p>0</p>')
                     $('#player1').css('color', 'red')
-                    $('#player2').css('color', 'rgb(235, 229, 229)')
+                    $('#player2').css('color', 'rgb(231, 226, 226)')
                     joueur = 1
                 } break
         case 2:
@@ -90,7 +90,7 @@ $('#buttonRollDice').click(function() {
 })
 
 
-$('#buttonHold').click(function() {
+$('#buttonHold, .buttonHold').click(function() {
     if(joueur === 1) {
         player1.score += player1.round
         document.getElementById("score1").innerHTML = player1.score ;
@@ -108,7 +108,7 @@ $('#buttonHold').click(function() {
    
     if(joueur === 1) {
         $('#player1').css('color', 'red')
-        $('#player2').css('color', 'rgb(235, 229, 229)')
+        $('#player2').css('color', 'rgb(231, 226, 226)')
     } else {
         $('#player1').css('color', 'white')
         $('#player2').css('color', 'red')
@@ -119,11 +119,15 @@ $('#buttonHold').click(function() {
         $('#score1').html('<p><b>100</b></p>')
         $('#buttonRollDice').css('display', 'none')
         $('#buttonHold').css('display', 'none')
+        $('p.buttonRollDice').css('display', 'none')
+        $('p.buttonHold').css('display', 'none')
     } 
     else if(player2.score >= 100) {
         $('#p2').html('<div><b>WINNER !!!</b></div>')
         $('#score2').html('<p><b>100</b></p>')
         $('#buttonRollDice').css('display', 'none')
         $('#buttonHold').css('display', 'none')
+        $('p.buttonRollDice').css('display', 'none')
+        $('p.buttonHold').css('display', 'none')
     }
 })

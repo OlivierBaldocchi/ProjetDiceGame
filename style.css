@@ -2,187 +2,345 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 3.5vw;
+    display: flex;
+    font-size: 3rem;
 }
 
 #back3 {
     position: absolute;
-    width: 98%;
-    height: 98%;
+    width: 100vw;
+    height: 99vh;
 }
 
 #back2 {
-    position: relative;
+    
+    position: absolute;
     left: 2vw;
-    top: 3vh;
+    top: 2vh;
+    width: 96vw;
+    height: 95vh;
     background-color: white;
-    height: 93vh;
-}   
+}
 
 #back1 {
+   
     position: relative;
-    z-index: 0;
-    top: 3vh;
-    background-color: rgb(235, 229, 229);
-    max-width: 47%;
-    height: 93vh;
-}   
-
-/*central part + buttons*/
-
-.over {
-    top: 15%;
-    left: 46%;
-    font-size: 2rem;
-    position: fixed;
-    z-index: 1;
-}
-
-#buttonNewGame {
-    width: 7%;
-}
-
-.buttonNewGame {
-    display: inline;
-}
-
-#dice {
-    width: 30%;
-    margin-top: 18vh;
-}
-
-#buttonRollDice {
-    width: 7%;
-}
-
-.buttonRollDice {
-    display: inline;
-}
-
-#buttonHold {
-    width: 7%;
-}
-
-#buttonNewGame:hover {
-    width: 8%;
-}
-
-#buttonRollDice:hover {
-    width: 8%;
-}
-
-#buttonHold:hover {
-    width: 8%;
-}
-
-.buttonHold {
-    display: inline;
-}
-
-.margin1 {
-    margin-top: 30%;
-}
-
-.margin2 {
-    margin-top: 5vh;
-}
-
-/*Scores players*/
-
-.totalScore {
-    text-align: center;
-    color: red;
-    font-size: 4rem;
-    margin-bottom: 30vh;
-}
-
-.roundSquare {
-    margin-inline: auto;
-    padding-top: 3%;
-    width: 20vh;
-    height: 15vh;
-    background-color: rgb(219, 49, 49);
-    font-size: 2rem;
-    text-align: center;
-}
-
-.roundScore {
-    padding-top: 1vh;
-    text-align: center;
-    font-size: 2rem;
-    color: white;
+    width: 48vw;
+    left: 50vw;
+    top: 2vh;
+    height: 95vh;
+    background-color: rgb(231, 226, 226);
 }
 
 .players {
-    margin-top: 10vh;
+    top: 10vh;
+    position: absolute;
+    left: 18vw;
 }
 
-#player1, 
+#player1,
 #player2 {
-    margin-left: 1vw;
-    margin-top: 1vh;
-    color: red;
-    font-size: 7vw;
+    top: 9vh;
+    position: absolute;
+    left: 30vw;
 }
 
-/* responsive */
+.totalScore {
+    position: absolute;
+    left: 22vw;
+    top: 20vh;
+    color: red;
+    font-size: 4rem;
+}
 
+.roundSquare {
+    position: absolute;
+    text-align: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 1vh;
+    left: 18vw;
+    top: 65vh;
+    background-color: red;
+    font-size: 1.5rem;
+}
 
-@media screen and (max-width: 900px) {
-    .over {
-        top: 25%;
-        left: 42%;
+.roundScore {
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 2rem;
+}
+
+/* buttons */
+
+#buttonNewGame {
+    position: absolute;
+    width: 2rem;
+    left: 42vw;
+    top: 20vh;
+}
+
+.buttonNewGame {
+    position: absolute;
+    display: inline;
+    font-size: 2rem;
+    left: 45vw;
+    z-index: 2;
+    top: 19vh;
+}
+
+.dice img {
+    position: absolute;
+    width: 11%;
+    left: 44.5%;
+    z-index: 2;
+    top: 35%;
+}
+
+#buttonRollDice {
+    position: absolute;
+    width: 2rem;
+    left: 42vw;
+    top: 65vh;
+}
+
+.buttonRollDice {
+    position: absolute;
+    display: inline;
+    font-size: 2rem;
+    left: 45vw;
+    z-index: 2;
+    top: 64vh;
+}
+
+#buttonHold {
+    position: absolute;
+    width: 2rem;
+    left: 44vw;
+    top: 75vh;
+}
+
+.buttonHold {
+    position: absolute;
+    display: inline;
+    font-size: 2rem;
+    left: 47vw;
+    z-index: 2;
+    top: 74vh;
+}
+
+@media screen and (max-width: 1800px) {
+    #player1,
+    #player2 {
+        left: 34vw;
     }
-    #dice {
-        margin-top: 5vh;
-        width: 28%;
+    .dice img {
+        width: 11%;
+        left: 44.5%;
     }
-    .totalScore {
-        margin-bottom: 50vh;
+}
+
+@media screen and (max-width: 1300px) {
+    body {
+        font-size: 2.5rem;
     }
     .players {
+        left: 15vw;
+    }
+    #player1,
+    #player2 {
+        left: 35vw;
         font-size: 3rem;
-        margin-top: 5vh;
+        top: 8vh;
+    }
+    .totalScore {
+        font-size: 3rem;
+    }
+    .roundScore,
+    .roundSquare {
+        font-size: 1.5rem;
+    }
+    #buttonNewGame {
+        width: 2rem;
+        left: 38vw;
+        top: 25vh;
+    }
+    .buttonNewGame {
+        font-size: 2rem;
+        left: 42vw;
+        top: 24.5vh;
+    }
+    #buttonRollDice {
+        width: 2rem;
+        left: 38vw;
+        top: 57vh;
+    }
+    .buttonRollDice {
+        font-size: 2rem;
+        left: 42vw;
+        top: 56.5vh;
+    }
+    #buttonHold {
+        width: 2rem;
+        left: 42vw;
+        top: 63vh;
+    }
+    .buttonHold {
+        font-size: 2rem;
+        left: 46vw;
+        top: 62.5vh;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .buttonNewGame,
-    .buttonRollDice,
-    .buttonHold {
-        font-size: 1.5rem;
+@media screen and (max-width: 900px) {
+    .players {
+        left: 11vw;
     }
-    #buttonNewGame,
-    #buttonRollDice,
+    #player1,
+    #player2 {
+        left: 43vw;
+        font-size: 3rem;
+        top: 8vh;
+    }
+    .roundScore,
+    .roundSquare {
+        top: 70vh;
+    }
+    #buttonNewGame {
+        left: 36vw;
+        top: 27.5vh;
+    }
+    .buttonNewGame {
+        left: 42vw;
+        top: 26.5vh;
+    }
+    .dice img {
+        left: 44.5%;
+        z-index: 2;
+        top: 40%;
+    }
+    #buttonRollDice {
+        left: 36vw;
+        top: 57vh;
+    }
+    .buttonRollDice {
+        left: 42vw;
+        top: 56.5vh;
+    }
+    #buttonHold {
+        left: 40vw;
+        top: 63vh;
+    }
+    .buttonHold {
+        left: 46vw;
+        top: 62.5vh;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        font-size: 2rem;
+    }
+    .players {
+        left: 6vw;
+    }
+    #player1,
+    #player2 {
+        top: 6.5vh;
+    }
+    .roundScore,
+    .roundSquare {
+        top: 80vh;
+        left: 10vw;
+    }
+    #buttonNewGame {
+        width: 1.5rem;
+        left: 36vw;
+        top: 31vh;
+    }
+    .buttonNewGame {
+        font-size: 1.3rem;
+        left: 42vw;
+        top: 30.5vh;
+    }
+    .dice img {
+        width: 20%;
+        left: 40%;
+        z-index: 2;
+        top: 40%;
+    }
+    #buttonRollDice {
+        width: 1.5rem;
+    }
+    .buttonRollDice {
+        font-size: 1.3rem;
+        left: 42vw;
+        top: 56.5vh;
+    }
     #buttonHold {
         width: 1.5rem;
     }
-    #buttonNewGame:hover,
-    #buttonRollDice:hover,
-    #buttonHold:hover {
-        width: 10%;
-    }
-    .players {
-        font-size: 2rem;
-    }
+    .buttonHold {
+        font-size: 1.3rem;
+    }   
 }
 
-@media screen and (max-width: 500px) {
-    .roundSquare {
+
+@media screen and (max-width: 390px) {
+    body {
         font-size: 1rem;
-        width: 25vw;
-        height: 10vh;
     }
-    .roundScore {
-        font-size: 1rem;
+    .players {
+        left: 15vw;
+    }
+    #player1,
+    #player2 {
+        left: 43vw;
+        font-size: 2rem;
+        top: 7vh;
     }
     .totalScore {
         font-size: 2rem;
+        top: 16vh;
     }
-    .margin2 {
-        margin-top: 1vh;
+    .roundScore,
+    .roundSquare {
+        font-size: 1rem;
     }
-    .over {
-        top: 20%;
+    .roundSquare {
+        left: 11vw;
+    }
+    #buttonNewGame {
+        width: 1rem;
+        left: 36vw;
+        top: 25vh;
+    }
+    .buttonNewGame {
+        font-size: 1rem;
+        left: 42vw;
+        top: 24.5vh;
+    }
+    #buttonRollDice {
+        width: 1rem;
+        left: 36vw;
+        top: 55vh;
+    }
+    .buttonRollDice {
+        font-size: 1rem;
+        left: 42vw;
+        top: 54.5vh;
+    }
+    #buttonHold {
+        width: 1rem;
+        left: 37vw;
+        top: 60vh;
+    }
+    .buttonHold {
+        font-size: 1rem;
+        left: 43vw;
+        top: 59.5vh;
     }
 }
+
+
+
